@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component renders correctly 1`] = `
+Array [
+  <h1
+    className="App"
+  >
+    Music Library
+  </h1>,
+  <div
+    className="sc-aXZVg jIXfAQ"
+  >
+    <div
+      className="card"
+    >
+      <img
+        alt=""
+        className="img"
+        src="https://upload.wikimedia.org/wikipedia/commons/1/1c/DuaLipaO2020522_%28101_of_110%29_%2852052470251%29_%28cropped%29.jpg"
+      />
+      <div
+        className="h3"
+      >
+        Dua Lipa
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt=""
+        className="img"
+        src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Louis_Armstrong_restored.jpg"
+      />
+      <div
+        className="h3"
+      >
+        Louis Armstrong
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt=""
+        className="img"
+        src="https://upload.wikimedia.org/wikipedia/commons/b/b5/191125_Taylor_Swift_at_the_2019_American_Music_Awards_%28cropped%29.png"
+      />
+      <div
+        className="h3"
+      >
+        Taylor Swift
+      </div>
+    </div>
+    <div
+      className="card"
+      onClick={[Function]}
+      role="button"
+    >
+      <svg
+        className="sc-eqUAAy fOpFXZ"
+        height="48"
+        viewBox="0 0 24 24"
+        width="48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs />
+        <title>
+          add-circle
+        </title>
+        <circle
+          cx="12"
+          cy="12"
+          fill="none"
+          r="11"
+          stroke="#000000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <line
+          fill="none"
+          stroke="#000000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          x1="12"
+          x2="12"
+          y1="6"
+          y2="18"
+        />
+        <line
+          fill="none"
+          stroke="#000000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          x1="18"
+          x2="6"
+          y1="12"
+          y2="12"
+        />
+      </svg>
+      <h3>
+        Add a new artist
+      </h3>
+    </div>
+  </div>,
+]
+`;

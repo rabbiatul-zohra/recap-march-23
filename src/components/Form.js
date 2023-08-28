@@ -1,7 +1,7 @@
-import { useState } from "react";
 import "../styles/form.css";
+import { useState } from "react";
 
-const Form = ({ handleAddArtist }) => {
+const Form = ({ handleAddArtist, handleCloseModal }) => {
   const [formData, setFormData] = useState({
     artistName: "",
     image: "",
@@ -15,6 +15,7 @@ const Form = ({ handleAddArtist }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     handleAddArtist(formData);
+    handleCloseModal(false);
   };
 
   return (
@@ -22,44 +23,45 @@ const Form = ({ handleAddArtist }) => {
       <h2>🧑‍🎤 Add Artist</h2>
       <form onSubmit={handleSubmit}>
         <div className='inputContainer'>
-          <label className='label'>
+          <label>
             Name
             <input
               value={formData.artistName}
               onChange={handleChange}
-              className='input'
-              type='text'
               name='artistName'
+              type='text'
+              className='input'
             />
           </label>
         </div>
 
         <div className='inputContainer'>
-          <label className='label'>
+          <label>
             Image
             <input
               value={formData.image}
               onChange={handleChange}
-              className='input'
-              type='text'
               name='image'
+              type='text'
+              className='input'
             />
           </label>
         </div>
 
         <div className='inputContainer'>
-          <label className='label'>
+          <label>
             Genre
             <input
               value={formData.genre}
               onChange={handleChange}
-              className='input'
-              type='text'
               name='genre'
+              type='text'
+              className='input'
             />
           </label>
         </div>
-        <button className='button' type='submit'>
+
+        <button type='submit' className='button'>
           Submit
         </button>
       </form>

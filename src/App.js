@@ -12,10 +12,18 @@ const App = () => {
   const [artists, setArtists] = useState(initialData);
   const [artistModelOpen, setArtistModelOpen] = useState(false);
 
+  const handleCloseModal = () => setArtistModelOpen(false);
+
   const handleAddArtist = (artist) => {
     setArtists([...artists, artist]);
   };
-  const handleCloseModal = () => setArtistModelOpen(false);
+
+  useEffect(() => {
+    console.log("Hello!");
+    return () => {
+      console.log("Bye!");
+    };
+  }, []);
 
   return (
     <BrowserRouter>
@@ -24,8 +32,8 @@ const App = () => {
         {artists.map((artist) => (
           <Artist
             key={artist.id}
-            name={artist.artistName}
             image={artist.image}
+            name={artist.artistName}
           />
         ))}
         <AddCard
@@ -34,7 +42,10 @@ const App = () => {
         />
         {artistModelOpen && (
           <Modal onClose={handleCloseModal}>
-            <Form handleAddArtist={handleAddArtist} />
+            <Form
+              handleAddArtist={handleAddArtist}
+              handleCloseModal={handleCloseModal}
+            />
           </Modal>
         )}
       </Grid>
